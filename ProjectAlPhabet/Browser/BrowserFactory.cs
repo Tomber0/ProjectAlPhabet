@@ -10,6 +10,22 @@ namespace ProjectAlPhabet.Browser
     {
         private static IWebDriver _driver;
         private static ICapabilities? _capabilities;
+
+        public static ICapabilities? Capabilities
+        {
+            get
+            {
+                LoggerProvider.Logger.Info($"Getting browser capabilities");
+                _capabilities = ((WebDriver)_driver).Capabilities;
+                return _capabilities;
+            }
+            private set
+            {
+                _capabilities = value;
+            }
+        }
+
+
         public static IWebDriver? Driver 
         {
             get 
