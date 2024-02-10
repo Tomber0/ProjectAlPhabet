@@ -9,6 +9,24 @@
         d:DataContext="{d:DesignInstance  Type=localmvvm:MainWindowModelView}"
         Title="Project AlPhabet" Height="640" Width="480">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.33*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="25,40,15,25"></Setter>
+                    <Setter Property="MinWidth" Value="80"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Button Command="{Binding NextPictureCommand}">Next Picture</Button>
+            <Button Command="{Binding PostPictureCommand}">Post</Button>
+            <Button Command="{Binding ShowSettingsCommand}" Content="{Binding SettingsTitle}"></Button>
+        </StackPanel>
     </Grid>
 </Window>
