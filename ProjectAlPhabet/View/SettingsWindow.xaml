@@ -1,0 +1,59 @@
+﻿<Window x:Class="ProjectAlPhabet.View.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectAlPhabet.View"
+        xmlns:localmvvm="clr-namespace:ProjectAlPhabet.ModelView"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance  Type=localmvvm:SettingWindowModelView}"
+        Title="Settings" Height="250" Width="250">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="Telegram Token:"></Label>
+            <StackPanel Height="30" Orientation="Horizontal" Margin="0">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Padding" Value="10"></Setter>
+                        <Setter Property="BorderThickness" Value="0 0 0 1"></Setter>
+
+                    </Style>
+                    <Style TargetType="Button">
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="Background" Value="#FFECECEC"></Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBox Width="170"></TextBox>
+                <Button Content="Change"></Button>
+            </StackPanel>
+            <Label Content="Settings file .json:"></Label>
+            <StackPanel Height="30" Orientation="Horizontal" Margin="0">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Padding" Value="10"></Setter>
+                        <Setter Property="BorderThickness" Value="0 0 0 1"></Setter>
+                        
+                    </Style>
+                    <Style TargetType="Button">
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="Background" Value="#FFECECEC"></Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBox Width="170"></TextBox>
+                <Button Content="Change"></Button>
+            </StackPanel>
+            <StackPanel Height="30" Orientation="Horizontal" Margin="0 10">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="MinWidth" Value="70"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="Background" Value="#FFECECEC"></Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Content="OK"  Margin="0 0 70 0"></Button>
+                <Button Content="Cancel"></Button>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
