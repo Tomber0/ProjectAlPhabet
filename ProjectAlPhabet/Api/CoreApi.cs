@@ -1,28 +1,44 @@
-﻿namespace ProjectAlPhabet.Api
+﻿using ProjectAlPhabet.Model;
+
+namespace ProjectAlPhabet.Api
 {
     static class CoreApi
     {
-        static public void FindImage()//
+        
+        //should return an Image url
+        //get info from config file: url, black list, tags, pririty tags
+        static public void FindImage()//skip for now
+        {
+            //if 
+        }
+
+        //priority 1
+        static public void PostImage(PictureInfo pictureInfo)//implement 
         {
             
         }
 
-        static public void PostImage() 
+        //gets an Image collection and performs an analyse
+        static public void ChooseImage() 
         {
-            
+        
         }
 
+        //should return a ImageInfo form url -> from FindImage()
         //private?
         static public void FetchImage() 
         {
             
         }
 
+        //priority 99
         static public bool UpdateConfig(string configFile)//in: config
         {
             return false;
         }
 
+
+        //priority 99
         static public bool UpdateTokenConfig(string configFile)//in: config
         {
 
