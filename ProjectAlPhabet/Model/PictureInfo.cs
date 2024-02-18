@@ -8,5 +8,8 @@ namespace ProjectAlPhabet.Model
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public Image Image { get; set; }
+        public byte[] Data { get; set; }
+        public byte[] DataUncomp { get; set; }
+
     }
 }
