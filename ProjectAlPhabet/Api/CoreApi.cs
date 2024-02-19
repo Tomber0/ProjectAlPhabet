@@ -10,7 +10,15 @@ namespace ProjectAlPhabet.Api
         //get info from config file: url, black list, tags, pririty tags
         static public void FindImage()//skip for now
         {
-            //if 
+            //main method
+
+            /* simple cycle:
+             * 1)go to uri 
+             * 2)find image on lsit
+             * 3)open it
+             * 4)save it
+             */
+
         }
 
         //priority 1
@@ -22,7 +30,7 @@ namespace ProjectAlPhabet.Api
         //gets an Image collection and performs an analyse
         static public void ChooseImage() 
         {
-        
+            
         }
 
         //should return a ImageInfo form url -> from FindImage()
