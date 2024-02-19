@@ -1,4 +1,5 @@
 ﻿using ProjectAlPhabet.Model;
+using ProjectAlPhabet.Utils;
 
 namespace ProjectAlPhabet.Api
 {
@@ -31,12 +32,14 @@ namespace ProjectAlPhabet.Api
             
         }
 
-        //priority 99
-        static public bool UpdateConfig(string configFile)//in: config
+        static public void UpdateConfig(string configFile)//in: config
         {
-            return false;
+            if (!CoreUtils.IsInitialFilePresented()) 
+            {
+                CoreUtils.CreateIniFile();
+            }
+            CoreUtils.ReadIniFile();
         }
-
 
         //priority 99
         static public bool UpdateTokenConfig(string configFile)//in: config

@@ -9,6 +9,7 @@ namespace ProjectAlPhabet
     {
         public MainWindow()
         {
+            // read from .ini
             DataContext = new ModelView.MainWindowModelView();
             InitializeComponent();
         }
